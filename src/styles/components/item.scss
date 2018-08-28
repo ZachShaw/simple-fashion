@@ -1,0 +1,65 @@
+@import '../_base';
+
+.item {
+ &--wrapper {
+  width: 250px;
+
+  @media (min-width: $bp-sm) and (max-width: $bp-md) {
+    width: 150px;
+  }
+
+  @media (min-width: $bp-md) and (max-width: $bp-lg) {
+    width: 160px;
+  }
+
+  @media (max-width: $bp-sm) {
+    margin: 20px 0;
+    width: 55vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+ }
+
+ &--details {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: flex-end;
+   padding-top: 10px;
+ }
+
+ &--info {
+   text-align: left;
+
+   p { 
+     font-weight: bold;
+     margin: 5px 0;
+    }
+  
+   p:last-of-type {
+    color: $grey;
+    font-size: 12px;
+    margin-bottom: 0;
+   }
+ }
+
+ &--purchase {
+
+   button {
+    background: $grey;
+    padding: 10px 15px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $orange;
+    }
+   }
+ }
+}

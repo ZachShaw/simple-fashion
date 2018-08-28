@@ -1,0 +1,117 @@
+@import '../_base';
+
+.basket {
+  &--container {
+    position: relative;
+  }
+
+  &--icon {
+    cursor: pointer;
+  }
+
+  &--count {
+    position: absolute;
+    font-size: 10px;
+    background-color: $orange;
+    border-radius: 100%;
+    top: -11px;
+    right: -11px;
+    color: $white;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  &--contents {
+    position: absolute;
+    top: 39px;
+    right: -20px;
+    width: 400px;
+    background-color: $orange;
+    box-shadow: -5px 5px 14px rgba(0,0,0,0.2);
+    padding: 0 20px 0 20px;
+    transition: all 0.2s ease;
+    opacity: 0;
+    height: 0;
+
+    @media (max-width: $bp-sm) {
+      width: 100vw;
+    }
+
+    &-active {
+      opacity: 1;
+      height: auto;
+    }
+
+    &-inactive {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  &--item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $black;
+    padding: 10px 0;
+    color: $black;
+
+    img {
+      height: 75px;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    &--details {
+      width: 35%;
+    }
+
+    &--price {
+      width: 20%;
+    }
+
+    &--quantity {
+      display: flex;
+      width: 25%;
+      justify-content: space-around;
+    }
+  }
+
+  &--footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    button {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: $white;
+      padding: 15px 60px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  &--total {
+    font-size: 18px;
+    font-weight: bold;
+    color: $black;
+    text-align: right;
+
+    &--sub {
+      font-size: 14px;
+    }
+
+    &--sum {
+      margin-top: 20px;
+    }
+  }
+}
